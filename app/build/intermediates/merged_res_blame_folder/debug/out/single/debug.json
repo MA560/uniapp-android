@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "camera_app.android_20240129.app-merged_res-36:/drawable-xxhdpi_splash.png.flat",
+        "source": "camera_app.android_20240129.app-main-38:/drawable-xxhdpi/splash.png"
+    },
+    {
+        "merged": "camera_app.android_20240129.app-merged_res-36:/drawable-xxhdpi_icon.png.flat",
+        "source": "camera_app.android_20240129.app-main-38:/drawable-xxhdpi/icon.png"
+    },
+    {
+        "merged": "camera_app.android_20240129.app-merged_res-36:/drawable-xxhdpi_push.png.flat",
+        "source": "camera_app.android_20240129.app-main-38:/drawable-xxhdpi/push.png"
+    }
+]

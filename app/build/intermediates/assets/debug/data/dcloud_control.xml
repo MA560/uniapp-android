@@ -1,0 +1,6 @@
+<hbuilder debug="true">
+<!-- syncDebug 会导致热更新失败 -->
+<apps>
+    <app appid="__UNI__561C153" appver=""/>
+</apps>
+</hbuilder>

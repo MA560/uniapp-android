@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextureView
+        android:id="@+id/viewFinder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </TextureView>
+
+        <!-- 双录的预览视图 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/double_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <!-- 前置摄像头预览 -->
+    <TextureView
+        android:layout_weight="1"
+        android:id="@+id/texture1"
+         android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/texture2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"
+         />
+
+        <!-- 后置摄像头预览 -->
+    <TextureView
+        android:layout_weight="1"
+        android:id="@+id/texture2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texture1"
+        android:visibility="invisible"
+         />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1">
+        <!-- 上面的切换按钮容器 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonViewTop"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonViewBot"
+            >
+            <!-- 录像 -->
+            <Button
+                android:id="@+id/recording_button"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:text="录像"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+            />
+            <!-- 拍照 -->
+            <Button
+                android:id="@+id/photograph_button"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:text="拍照"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/recording_button"
+                 />
+            <!-- 双录 -->
+            <Button
+                android:id="@+id/double_recording_button"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:text="双录"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/photograph_button"
+                 />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 下面的操作按钮容器 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonViewBot"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/buttonViewTop"
+            >
+
+
+            <!-- 预览 暂时不用 不显示 -->
+            <Button
+                android:id="@+id/capture_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="Capture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"
+                 />
+            <!-- 确定按钮 -->
+            <Button
+                android:id="@+id/custom_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/circle_button"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                 />
+            <!-- 切换按钮 -->
+            <Button
+                android:id="@+id/switch_camera_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="切换"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                 />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+#Mon Mar 18 14:55:42 CST 2024
+base.0=C\:\\Users\\ma_xx\\Desktop\\newCameraApp\\app\\build\\intermediates\\dex\\debug\\minifyDebugWithR8\\classes.dex
+base.1=C\:\\Users\\ma_xx\\Desktop\\newCameraApp\\app\\build\\intermediates\\dex\\debug\\minifyDebugWithR8\\classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
